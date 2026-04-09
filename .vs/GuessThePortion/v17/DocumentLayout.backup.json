@@ -1,10 +1,37 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\S25180375\\Documents\\GitHub\\GuessThePortion\\",
+  "WorkspaceRootPath": "D:\\Github\\GuessThePortion\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{184FBB85-BB8D-CC08-EF3E-CA52914246E1}|Assembly-CSharp.csproj|c:\\users\\s25180375\\documents\\github\\guesstheportion\\assets\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{184FBB85-BB8D-CC08-EF3E-CA52914246E1}|Assembly-CSharp.csproj|solutionrelative:assets\\button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\GuessThePortion\\Assets\\knifrpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\knifrpickup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\GuessThePortion\\Assets\\knifeslice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\knifeslice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\GuessThePortion\\Assets\\Missionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Missionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\GuessThePortion\\Assets\\Followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Followcamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\GuessThePortion\\Assets\\Checklistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Checklistmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\GuessThePortion\\Assets\\LazyFollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\LazyFollow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\S25180375\\Documents\\GitHub\\GuessThePortion\\Assets\\QuitGame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Github\\GuessThePortion\\Assets\\Button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Assets\\Button.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +46,96 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "knifrpickup.cs",
+              "DocumentMoniker": "D:\\Github\\GuessThePortion\\Assets\\knifrpickup.cs",
+              "RelativeDocumentMoniker": "Assets\\knifrpickup.cs",
+              "ToolTip": "D:\\Github\\GuessThePortion\\Assets\\knifrpickup.cs",
+              "RelativeToolTip": "Assets\\knifrpickup.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T17:51:12.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Missionmanager.cs",
+              "DocumentMoniker": "D:\\Github\\GuessThePortion\\Assets\\Missionmanager.cs",
+              "RelativeDocumentMoniker": "Assets\\Missionmanager.cs",
+              "ToolTip": "D:\\Github\\GuessThePortion\\Assets\\Missionmanager.cs",
+              "RelativeToolTip": "Assets\\Missionmanager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T17:35:12.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Followcamera.cs",
+              "DocumentMoniker": "D:\\Github\\GuessThePortion\\Assets\\Followcamera.cs",
+              "RelativeDocumentMoniker": "Assets\\Followcamera.cs",
+              "ToolTip": "D:\\Github\\GuessThePortion\\Assets\\Followcamera.cs",
+              "RelativeToolTip": "Assets\\Followcamera.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T16:46:17.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Checklistmanager.cs",
+              "DocumentMoniker": "D:\\Github\\GuessThePortion\\Assets\\Checklistmanager.cs",
+              "RelativeDocumentMoniker": "Assets\\Checklistmanager.cs",
+              "ToolTip": "D:\\Github\\GuessThePortion\\Assets\\Checklistmanager.cs",
+              "RelativeToolTip": "Assets\\Checklistmanager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T15:47:21.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "knifeslice.cs",
+              "DocumentMoniker": "D:\\Github\\GuessThePortion\\Assets\\knifeslice.cs",
+              "RelativeDocumentMoniker": "Assets\\knifeslice.cs",
+              "ToolTip": "D:\\Github\\GuessThePortion\\Assets\\knifeslice.cs",
+              "RelativeToolTip": "Assets\\knifeslice.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAiwEAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T12:36:51.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LazyFollow.cs",
+              "DocumentMoniker": "D:\\Github\\GuessThePortion\\Assets\\LazyFollow.cs",
+              "RelativeDocumentMoniker": "Assets\\LazyFollow.cs",
+              "ToolTip": "D:\\Github\\GuessThePortion\\Assets\\LazyFollow.cs",
+              "RelativeToolTip": "Assets\\LazyFollow.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwDwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-09T11:59:05.867Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "QuitGame.cs",
+              "DocumentMoniker": "C:\\Users\\S25180375\\Documents\\GitHub\\GuessThePortion\\Assets\\QuitGame.cs",
+              "ToolTip": "C:\\Users\\S25180375\\Documents\\GitHub\\GuessThePortion\\Assets\\QuitGame.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-26T16:17:10.459Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Button.cs",
-              "DocumentMoniker": "C:\\Users\\S25180375\\Documents\\GitHub\\GuessThePortion\\Assets\\Button.cs",
+              "DocumentMoniker": "D:\\Github\\GuessThePortion\\Assets\\Button.cs",
               "RelativeDocumentMoniker": "Assets\\Button.cs",
-              "ToolTip": "C:\\Users\\S25180375\\Documents\\GitHub\\GuessThePortion\\Assets\\Button.cs",
+              "ToolTip": "D:\\Github\\GuessThePortion\\Assets\\Button.cs",
               "RelativeToolTip": "Assets\\Button.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-26T16:15:48.475Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-03-26T16:15:48.475Z"
             }
           ]
         }
