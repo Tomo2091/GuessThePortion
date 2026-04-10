@@ -6,10 +6,10 @@ using UnityEngine.SceneManagement;
 
 public class Button : MonoBehaviour
 {
-    [SerializeField] private string Shop = "Shop";
+    [SerializeField] private string SelectDish = "SelectDish";
     public void NewGameButton()
     {
-        SceneManager.LoadScene(Shop);
+        SceneManager.LoadScene(SelectDish);
     }
 
 
