@@ -1,59 +1,48 @@
-// using UnityEngine;
-// using UnityEngine.XR.Interaction.Toolkit;
-// using UnityEngine.XR.Interaction.Toolkit.Interactables;
-// public class ShowMenuOnGrab : MonoBehaviour
-// {
-//     public GameObject menuCanvas;
-//     // Start is called once before the first execution of Update after the MonoBehaviour is created
-//     void Start()
-//     {
-//         menuCanvas.SetActive(false);
-
-//         var grab = GetComponent<XRGrabInteractable>();
-//         grab.selectEntered.AddListener(OnGrab);
-//         grab.selectExited.AddListener(OnRelease);
-//     }
-
-//     void OnGrab(SelectEnterEventArgs args)
-//     {
-//         menuCanvas.SetActive(true);
-//     }
-
-//     void OnRelease(SelectExitEventArgs args)
-//     {
-//         menuCanvas.SetActive(false);
-//     }
-//     // Update is called once per frame
-//     void Update()
-//     {
-//         if (menuCanvas.activeSelf)
-//         {
-//             menuCanvas.transform.LookAt(Camera.main.transform);
-//             menuCanvas.transform.Rotate(0, 180, 0);
-//         }
-//     }
-// }
-
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.InputSystem;
-using System.Collections.Generic;
+using TMPro;
 
 public class ShowMenuOnGrab : MonoBehaviour
 {
     public GameObject menuCanvas;
-    public InputActionReference confirmButton; // ปุ่ม B
+    public InputActionReference confirmButton;
+
+    public GameObject missionSign;
+    public TextMeshProUGUI missionText;
+
+    [Header("Mission Info")]
+    public string menuName;
+    public int customerCount;
 
     private bool isGrabbed = false;
     private Transform playerBody;
 
-    public static List<string> inventory = new List<string>();
-    public static bool alreadyCollected = false;
+    private static GameObject sharedMissionSign;
+    private static TextMeshProUGUI sharedMissionText;
+    private static GameObject previousScroll;
+    private static Vector3 previousScrollPos;
+    private static Quaternion previousScrollRot;
+    private static Transform previousScrollParent;
+
+    private Vector3 originalPos;
+    private Quaternion originalRot;
+    private Transform originalParent;
 
     void Start()
     {
         menuCanvas.SetActive(false);
+
+        originalPos = transform.position;
+        originalRot = transform.rotation;
+        originalParent = transform.parent;
+
+        if (missionSign != null) sharedMissionSign = missionSign;
+        if (missionText != null) sharedMissionText = missionText;
+
+        if (sharedMissionSign != null)
+            sharedMissionSign.SetActive(false);
 
         var grab = GetComponent<XRGrabInteractable>();
         grab.selectEntered.AddListener(OnGrab);
@@ -62,20 +51,24 @@ public class ShowMenuOnGrab : MonoBehaviour
 
     void OnEnable()
     {
-        if (confirmButton != null)
+        if (confirmButton != null && confirmButton.action != null)
+        {
             confirmButton.action.Enable();
+        }
     }
 
     void OnDisable()
     {
-        if (confirmButton != null)
-            confirmButton.action.Disable();
+
     }
 
     void OnGrab(SelectEnterEventArgs args)
     {
         menuCanvas.SetActive(true);
         isGrabbed = true;
+
+        if (confirmButton != null && confirmButton.action != null)
+            confirmButton.action.Enable();
     }
 
     void OnRelease(SelectExitEventArgs args)
@@ -94,7 +87,6 @@ public class ShowMenuOnGrab : MonoBehaviour
                 return;
         }
 
-        // หัน Canvas หาผู้เล่น
         if (menuCanvas.activeSelf)
         {
             Vector3 direction = playerBody.position - menuCanvas.transform.position;
@@ -104,31 +96,60 @@ public class ShowMenuOnGrab : MonoBehaviour
             }
         }
 
-        // กดปุ่ม B ขณะหยิบอยู่ → confirm
         if (isGrabbed && confirmButton != null && confirmButton.action.WasPressedThisFrame())
         {
-            if (alreadyCollected)
-            {
-                Debug.Log("คุณเลือกเมนูไปแล้ว!");
-            }
-            else
-            {
-                CollectItem();
-            }
+            CollectItem();
         }
     }
 
     void CollectItem()
     {
-        alreadyCollected = true;
+        // วางอันเก่าคืน
+        if (previousScroll != null && previousScroll != gameObject)
+        {
+            previousScroll.SetActive(true);
+            previousScroll.transform.SetParent(previousScrollParent);
+            previousScroll.transform.position = previousScrollPos;
+            previousScroll.transform.rotation = previousScrollRot;
 
+            // reset rigidbody
+            var oldRb = previousScroll.GetComponent<Rigidbody>();
+            if (oldRb != null)
+            {
+                oldRb.linearVelocity = Vector3.zero;
+                oldRb.angularVelocity = Vector3.zero;
+                oldRb.isKinematic = true;
+            }
+
+            // เปิด grab กลับ
+            var oldGrab = previousScroll.GetComponent<XRGrabInteractable>();
+            if (oldGrab != null) oldGrab.enabled = true;
+
+            // เปิด menu canvas กลับให้พร้อมใช้
+            var oldScript = previousScroll.GetComponent<ShowMenuOnGrab>();
+            if (oldScript != null) oldScript.menuCanvas.SetActive(false);
+        }
+
+        // จำตัวนี้ไว้
+        previousScroll = gameObject;
+        previousScrollPos = originalPos;
+        previousScrollRot = originalRot;
+        previousScrollParent = originalParent;
+
+        // ปิด grab + ซ่อน
         var grab = GetComponent<XRGrabInteractable>();
         grab.enabled = false;
-
-        inventory.Add(gameObject.name);
-        Debug.Log("เลือกเมนู: " + gameObject.name);
         menuCanvas.SetActive(false);
         isGrabbed = false;
         gameObject.SetActive(false);
+
+        // อัพเดทป้าย mission
+        if (sharedMissionSign != null)
+            sharedMissionSign.SetActive(true);
+
+        if (sharedMissionText != null)
+            sharedMissionText.text = menuName + "\n" + customerCount + " Customers";
+
+        Debug.Log("เลือกเมนู: " + menuName);
     }
 }

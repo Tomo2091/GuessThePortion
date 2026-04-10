@@ -402,7 +402,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6873022368256633584, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_TrackingType
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -642,6 +642,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LockCamera
   maxYaw: 90
   maxPitch: 10
+  lockOnlyInMainMenu: 1
+  mainMenuSceneName: Mainmenu
 --- !u!1 &789096610
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,6 +1004,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LockCamera
   maxYaw: 15
   maxPitch: 10
+  lockOnlyInMainMenu: 1
+  mainMenuSceneName: Mainmenu
 --- !u!1 &941986140
 GameObject:
   m_ObjectHideFlags: 0
