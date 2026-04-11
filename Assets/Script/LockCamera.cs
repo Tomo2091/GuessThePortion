@@ -57,4 +57,6 @@ public class LockCamera : MonoBehaviour
             yawTarget.rotation = Quaternion.Euler(0f, initialYaw + clampedYaw, 0f);
         }
     }
+
+    
 }

@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/kitchen.unity
     guid: fc76259bfe8f297499a64b627cf72907
+  - enabled: 1
+    path: Assets/Scenes/Restaurant.unity
+    guid: 092d561e6d172432784138a1edaf255e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 289c1b55c9541489481df5cc06664110, type: 3}
     com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 3742c34581b12a7439f09fbf74e523cd, type: 2}

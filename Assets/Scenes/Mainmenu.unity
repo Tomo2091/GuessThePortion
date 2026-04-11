@@ -332,7 +332,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45fae5fd54edfcf4a93a76f9dabb5026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  Shop: Shop
 --- !u!4 &230657092
 Transform:
   m_ObjectHideFlags: 0
@@ -362,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.26
+      value: 2.62
       objectReference: {fileID: 0}
     - target: {fileID: 2218496723442559053, guid: d6878e1999eb4b44a9f5a263af86c185, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1018,6 +1017,7 @@ GameObject:
   - component: {fileID: 941986144}
   - component: {fileID: 941986143}
   - component: {fileID: 941986142}
+  - component: {fileID: 941986145}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 230657091}
+      - m_Target: {fileID: 941986145}
         m_TargetAssemblyTypeName: Button, Assembly-CSharp
         m_MethodName: NewGameButton
         m_Mode: 1
@@ -1138,6 +1138,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941986140}
   m_CullTransparentMesh: 1
+--- !u!114 &941986145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 941986140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6883e41bd5f0c4994a15fe32d5f7e926, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Button
+  SceneName: SelectDish
 --- !u!1 &1191069120
 GameObject:
   m_ObjectHideFlags: 0
