@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Sliceable
+  - Dough
+  - Sausage
+  - Pizza
   layers:
   - Default
   - TransparentFX
@@ -13,9 +16,9 @@ TagManager:
   - Water
   - UI
   - slicer
-  - 
-  - 
-  - 
+  - Dough
+  - Sausage
+  - Pizza
   - 
   - 
   - 
