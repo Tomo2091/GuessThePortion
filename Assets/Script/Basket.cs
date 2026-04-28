@@ -104,4 +104,9 @@ public class Basket : MonoBehaviour
         summary += "\n" + totalItems + " items";
         return summary;
     }
+
+    public float GetTotalPrice()
+{
+    return totalPrice;
+}
 }
