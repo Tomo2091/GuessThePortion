@@ -104,6 +104,9 @@ public class ShowMenuOnGrab : MonoBehaviour
 
     void CollectItem()
     {
+        PlayerPrefs.SetString("menuName", menuName);
+        PlayerPrefs.SetInt("customerCount", customerCount);
+        PlayerPrefs.Save();
         // วางอันเก่าคืน
         if (previousScroll != null && previousScroll != gameObject)
         {
@@ -128,6 +131,8 @@ public class ShowMenuOnGrab : MonoBehaviour
             // เปิด menu canvas กลับให้พร้อมใช้
             var oldScript = previousScroll.GetComponent<ShowMenuOnGrab>();
             if (oldScript != null) oldScript.menuCanvas.SetActive(false);
+
+             
         }
 
         // จำตัวนี้ไว้

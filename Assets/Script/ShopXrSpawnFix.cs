@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public static class ShopXrSpawnFix
 {
     private const string ShopSceneName = "Shop";
-    private static readonly Vector3 SpawnPosition = new Vector3(12.06f, 3.318f, 15.85f);
+    private static readonly Vector3 SpawnPosition = new Vector3(11.06f, 3.318f, 15.85f);
     private static readonly Quaternion SpawnRotation = Quaternion.Euler(0f, 279.8f, 0f);
     private static readonly Vector3 LeftHandLocalPosition = new Vector3(-0.18f, -0.35f, 0.2f);
     private static readonly Vector3 RightHandLocalPosition = new Vector3(0.18f, -0.35f, 0.2f);
