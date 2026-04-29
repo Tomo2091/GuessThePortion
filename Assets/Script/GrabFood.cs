@@ -3,12 +3,16 @@ using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.InputSystem;
 
-public class GrabBag : MonoBehaviour
+public class GraFood : MonoBehaviour
 {
     public Transform leftHand;
     public InputActionReference confirmButton;
     public InputActionReference placeButton;
 
+    public Transform OvenPoint;
+    private bool isPlaced = false;
+
+    
 
     private bool isGrabbed = false;
     private bool isAttached = false;
@@ -19,12 +23,30 @@ public class GrabBag : MonoBehaviour
         grab.selectEntered.AddListener(OnGrab);
         grab.selectExited.AddListener(OnRelease);
     }
-
     void OnEnable()
     {
         if (confirmButton != null)
             confirmButton.action.Enable();
+        if (placeButton != null)
+            placeButton.action.Enable();
     }
+
+     void PlaceOnCounter()
+    {
+        if (OvenPoint == null)
+        {
+            Debug.Log("ยังไม่ได้ตั้ง counter point!");
+            return;
+        }
+
+        isPlaced = true;
+        transform.position = OvenPoint.position;
+        transform.rotation = OvenPoint.rotation;
+
+        Debug.Log("วางตะกร้าบน counter แล้ว!");
+
+    }
+
 
     void OnGrab(SelectEnterEventArgs args)
     {
@@ -39,18 +61,20 @@ public class GrabBag : MonoBehaviour
 
     void Update()
     {
-        if (isGrabbed && !isAttached && confirmButton != null && confirmButton.action.WasPressedThisFrame())
+         if (isGrabbed && !isAttached && confirmButton != null && confirmButton.action.WasPressedThisFrame())
         {
             AttachToLeftHand();
         }
 
-        if (isAttached && leftHand != null)
+        if (isAttached && !isPlaced && leftHand != null)
         {
-            transform.position = leftHand.position
-                + leftHand.forward * 0.3f
-                + leftHand.up * -0.2f
-                + leftHand.right * -0.3f;
+            transform.position = leftHand.position + leftHand.forward * 0.7f + leftHand.up * -0.7f + leftHand.right * -0.2f;
             transform.rotation = leftHand.rotation;
+        }
+
+        if (isAttached && !isPlaced && placeButton != null && placeButton.action.WasPressedThisFrame())
+        {
+            PlaceOnCounter();
         }
     }
 
@@ -69,6 +93,6 @@ public class GrabBag : MonoBehaviour
             rb.angularVelocity = Vector3.zero;
         }
 
-        Debug.Log("ถุงติดมือซ้ายแล้ว!");
+        Debug.Log("พิซซ่าติดมือแล้ว");
     }
 }
